@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Person-->
+        <!--Person List-->
         <scene sceneID="uBl-zx-9yL">
             <objects>
                 <tableViewController id="BiD-sw-PP2" customClass="SecondPersonListViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,7 +32,7 @@
                             <outlet property="delegate" destination="BiD-sw-PP2" id="BYf-St-J3N"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Person" image="person" catalog="system" id="2Rd-Op-LNy"/>
+                    <tabBarItem key="tabBarItem" title="Person List" image="person.text.rectangle" catalog="system" id="2Rd-Op-LNy"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0FR-F5-SfB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -80,7 +80,7 @@
                             <outlet property="delegate" destination="Oxt-cy-oz6" id="rid-uf-XlR"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Person Detail" image="person" catalog="system" id="dlZ-Yx-WWc"/>
+                    <tabBarItem key="tabBarItem" title="Person" image="person" catalog="system" id="dlZ-Yx-WWc"/>
                     <navigationItem key="navigationItem" title="Person's List" id="GA3-9I-pgj"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OUl-7f-cp3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -107,13 +107,13 @@
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zxx-xF-kYh">
                                         <rect key="frame" x="0.0" y="267" width="240" height="20.333333333333314"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jf1-Uq-GrF">
                                         <rect key="frame" x="0.0" y="314.33333333333331" width="240" height="20.333333333333314"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -183,6 +183,7 @@
     </scenes>
     <resources>
         <image name="person" catalog="system" width="128" height="121"/>
+        <image name="person.text.rectangle" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

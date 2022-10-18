@@ -23,7 +23,7 @@ class PersonDetailsViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.title = "\(person.name) \(person.lastName)"
         personImge.image = UIImage(named: person.photo)
-        personEmail.text = "Email: \(person.emailAdress)"
-        personNumber.text = "Phone: \(person.phoneNumber)"
+        personEmail.text = "📧 Email: \(person.emailAdress)"
+        personNumber.text = "📞 Phone: \(person.phoneNumber)"
     }
 }

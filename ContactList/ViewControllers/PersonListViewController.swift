@@ -8,15 +8,15 @@
 import UIKit
 
 class PersonListViewController: UITableViewController {
-
+    
     let personList = Person.getPersonData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
-        tableView.rowHeight = 120
+        tableView.rowHeight = 100
     }
-
+    
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -25,14 +25,13 @@ class PersonListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "сontact", for: indexPath)
-        
         var content = cell.defaultContentConfiguration()
         let person = personList[indexPath.row]
         
         content.text = person.name
         content.secondaryText = person.lastName
         content.image = UIImage(named: person.photo)
-        content.imageProperties.maximumSize = CGSize(width: 90, height: 90)
+        content.imageProperties.maximumSize = CGSize(width: 80, height: 80)
         content.imageProperties.cornerRadius = tableView.rowHeight / 2
         cell.contentConfiguration = content
         

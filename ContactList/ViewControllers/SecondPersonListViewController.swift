@@ -36,7 +36,7 @@ class SecondPersonListViewController: UITableViewController {
         
         cell.contentConfiguration = content
         return cell
-        }
+    }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let person = persons[section]
