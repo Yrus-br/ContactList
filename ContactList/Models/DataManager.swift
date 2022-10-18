@@ -8,11 +8,11 @@
 class DataManager {
     let names = ["John", "Ted", "Lol", "Walter", "Nikola",]
     let lastNames = ["Brown", "Kola", "Tesla", "Green", "White"]
-    let phoneNumbers = ["+7 (906) 979-25-03",
-                        "+7 (916) 965-12-12",
-                        "+7 (800) 55-35-35",
-                        "+7 (911) 111-12-13",
-                        "+7 (912) 272-68-52"]
+    let phoneNumbers = ["+79069792503",
+                        "+79169651212",
+                        "+7800553535",
+                        "+79111111213",
+                        "+79122726852"]
     let emails = ["google@gmail.com",
                   "yandex@yandex.ru",
                   "mailru@mail.ru",
