@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Person-->
         <scene sceneID="uBl-zx-9yL">
             <objects>
                 <tableViewController id="BiD-sw-PP2" customClass="SecondPersonListViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="contact" id="5nI-p9-ZS1">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="contact" id="5nI-p9-ZS1">
                                 <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5nI-p9-ZS1" id="vzs-Bu-tQU">
@@ -32,7 +32,7 @@
                             <outlet property="delegate" destination="BiD-sw-PP2" id="BYf-St-J3N"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" image="person" catalog="system" id="2Rd-Op-LNy"/>
+                    <tabBarItem key="tabBarItem" title="Person" image="person" catalog="system" id="2Rd-Op-LNy"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0FR-F5-SfB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -80,7 +80,7 @@
                             <outlet property="delegate" destination="Oxt-cy-oz6" id="rid-uf-XlR"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" image="person" catalog="system" id="dlZ-Yx-WWc"/>
+                    <tabBarItem key="tabBarItem" title="Person Detail" image="person" catalog="system" id="dlZ-Yx-WWc"/>
                     <navigationItem key="navigationItem" title="Person's List" id="GA3-9I-pgj"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OUl-7f-cp3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

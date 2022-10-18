@@ -13,7 +13,7 @@ class DataManager {
                         "+7 (800) 55-35-35",
                         "+7 (911) 111-12-13",
                         "+7 (912) 272-68-52"]
-    let emails = ["goole@gmail.com",
+    let emails = ["google@gmail.com",
                   "yandex@yandex.ru",
                   "mailru@mail.ru",
                   "yahoo@yahoo.com",

@@ -9,7 +9,11 @@ import UIKit
 
 class PersonDetailsViewController: UIViewController {
     
-    @IBOutlet var personImge: UIImageView!
+    @IBOutlet var personImge: UIImageView! {
+        didSet {
+            personImge.layer.cornerRadius = personImge.frame.height / 2
+        }
+    }
     @IBOutlet var personEmail: UILabel!
     @IBOutlet var personNumber: UILabel!
     
@@ -18,7 +22,6 @@ class PersonDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "\(person.name) \(person.lastName)"
-        personImge.layer.cornerRadius = personImge.frame.height / 2
         personImge.image = UIImage(named: person.photo)
         personEmail.text = "Email: \(person.emailAdress)"
         personNumber.text = "Phone: \(person.phoneNumber)"

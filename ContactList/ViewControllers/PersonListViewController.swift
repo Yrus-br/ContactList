@@ -14,7 +14,7 @@ class PersonListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
-        tableView.rowHeight = 80
+        tableView.rowHeight = 120
     }
 
     // MARK: - Table view data source
@@ -32,7 +32,7 @@ class PersonListViewController: UITableViewController {
         content.text = person.name
         content.secondaryText = person.lastName
         content.image = UIImage(named: person.photo)
-        content.imageProperties.maximumSize = CGSize(width: 70, height: 70)
+        content.imageProperties.maximumSize = CGSize(width: 90, height: 90)
         content.imageProperties.cornerRadius = tableView.rowHeight / 2
         cell.contentConfiguration = content
         

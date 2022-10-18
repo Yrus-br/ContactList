@@ -18,7 +18,7 @@ class SecondPersonListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -26,8 +26,14 @@ class SecondPersonListViewController: UITableViewController {
         let person = persons[indexPath.section]
         var content = cell.defaultContentConfiguration()
         
-        content.text = person.phoneNumber
-        content.secondaryText = person.emailAdress
+        content.text = indexPath.row == 0
+        ? "Phone: \(person.phoneNumber)"
+        : "Email: \(person.emailAdress)"
+        
+        content.image = indexPath.row == 1
+        ? UIImage(systemName: "mail")
+        : UIImage(systemName: "phone")
+        
         cell.contentConfiguration = content
         return cell
         }
