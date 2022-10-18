@@ -13,6 +13,7 @@ class PersonListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.prefersLargeTitles = true
         tableView.rowHeight = 80
     }
 
@@ -41,6 +42,8 @@ class PersonListViewController: UITableViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        let detailsVC = segue.destination as? PersonDetailsViewController
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        detailsVC?.person = personList[indexPath.row]
     }
 }

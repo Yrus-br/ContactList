@@ -16,7 +16,7 @@ struct Person {
         var humans: [Person] = []
         
         let namesOfHumans = DataManager.infoData.names.shuffled()
-        let lastNamesOfHuman = DataManager.infoData.lastNames.shuffled()
+        let lastNamesOfHumans = DataManager.infoData.lastNames.shuffled()
         let phoneNumbers = DataManager.infoData.phoneNumbers.shuffled()
         let emailAdresses = DataManager.infoData.emails.shuffled()
         let photos = DataManager.infoData.photos.shuffled()
@@ -24,7 +24,7 @@ struct Person {
         for num in 0..<namesOfHumans.count {
             let human = Person(
                 name: namesOfHumans[num],
-                lastName: lastNamesOfHuman[num],
+                lastName: lastNamesOfHumans[num],
                 phoneNumber: phoneNumbers[num],
                 emailAdress: emailAdresses[num],
                 photo: photos[num]
