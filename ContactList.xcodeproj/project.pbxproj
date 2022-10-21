@@ -68,8 +68,7 @@
 				3FEDE56B28FEABE700E61CB8 /* ViewControllers */,
 				3FEDE56A28FEABDA00E61CB8 /* Storyboards */,
 				3FEDE56628FDE3F700E61CB8 /* App */,
-				3FEDE55B28FDE35800E61CB8 /* Assets.xcassets */,
-				3FEDE56F28FECF2200E61CB8 /* DataManager.swift */,
+				3FF070772902E25B0078ED99 /* Services */,
 			);
 			path = ContactList;
 			sourceTree = "<group>";
@@ -109,6 +108,15 @@
 				3FEDE56D28FEC7DE00E61CB8 /* Person.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3FF070772902E25B0078ED99 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3FEDE55B28FDE35800E61CB8 /* Assets.xcassets */,
+				3FEDE56F28FECF2200E61CB8 /* DataManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
