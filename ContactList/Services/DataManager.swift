@@ -20,5 +20,5 @@ class DataManager {
                   "outlook@outlook.com"]
     let photos = ["waltBoy1", "waltBoy2", "waltBoy3", "waltBoy4", "waltBoy5"]
     
-    static let infoData = DataManager()
+    static let shared = DataManager()
 }
