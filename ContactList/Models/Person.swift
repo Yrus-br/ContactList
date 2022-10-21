@@ -15,11 +15,11 @@ struct Person {
     static func getPersonData() -> [Person] {
         var humans: [Person] = []
         
-        let namesOfHumans = DataManager.infoData.names.shuffled()
-        let lastNamesOfHumans = DataManager.infoData.lastNames.shuffled()
-        let phoneNumbers = DataManager.infoData.phoneNumbers.shuffled()
-        let emailAdresses = DataManager.infoData.emails.shuffled()
-        let photos = DataManager.infoData.photos.shuffled()
+        let namesOfHumans = DataManager.shared.names.shuffled()
+        let lastNamesOfHumans = DataManager.shared.lastNames.shuffled()
+        let phoneNumbers = DataManager.shared.phoneNumbers.shuffled()
+        let emailAdresses = DataManager.shared.emails.shuffled()
+        let photos = DataManager.shared.photos.shuffled()
         
         for num in 0..<namesOfHumans.count {
             let human = Person(
