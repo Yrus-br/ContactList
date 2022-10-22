@@ -12,8 +12,16 @@ struct Person {
     let emailAdress: String
     let photo: String
     
+    var fullname: String {
+        "\(name) \(lastName)"
+    }
+}
+
+
+extension Person {
     static func getPersonData() -> [Person] {
-        var humans: [Person] = []
+        
+        var persons: [Person] = []
         
         let namesOfHumans = DataManager.shared.names.shuffled()
         let lastNamesOfHumans = DataManager.shared.lastNames.shuffled()
@@ -21,16 +29,25 @@ struct Person {
         let emailAdresses = DataManager.shared.emails.shuffled()
         let photos = DataManager.shared.photos.shuffled()
         
-        for num in 0..<namesOfHumans.count {
+        let iterationCount = min(
+            namesOfHumans.count,
+            lastNamesOfHumans.count,
+            phoneNumbers.count,
+            emailAdresses.count,
+            photos.count
+        )
+        
+        for index in 0..<iterationCount {
             let human = Person(
-                name: namesOfHumans[num],
-                lastName: lastNamesOfHumans[num],
-                phoneNumber: phoneNumbers[num],
-                emailAdress: emailAdresses[num],
-                photo: photos[num]
+                name: namesOfHumans[index],
+                lastName: lastNamesOfHumans[index],
+                phoneNumber: phoneNumbers[index],
+                emailAdress: emailAdresses[index],
+                photo: photos[index]
             )
-            humans.append(human)
+            persons.append(human)
         }
-        return humans
+        
+        return persons
     }
 }

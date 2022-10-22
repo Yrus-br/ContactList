@@ -6,6 +6,7 @@
 //
 
 class DataManager {
+    static let shared = DataManager()
     let names = ["John", "Ted", "Lol", "Walter", "Nikola",]
     let lastNames = ["Brown", "Kola", "Tesla", "Green", "White"]
     let phoneNumbers = ["+79069792503",
@@ -20,5 +21,5 @@ class DataManager {
                   "outlook@outlook.com"]
     let photos = ["waltBoy1", "waltBoy2", "waltBoy3", "waltBoy4", "waltBoy5"]
     
-    static let shared = DataManager()
+    private init() {}
 }
