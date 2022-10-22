@@ -162,7 +162,7 @@
         <!--Person-->
         <scene sceneID="f0D-6G-fx3">
             <objects>
-                <tabBarController title="Person" automaticallyAdjustsScrollViewInsets="NO" id="NBv-Rf-JHw" sceneMemberID="viewController">
+                <tabBarController title="Person" automaticallyAdjustsScrollViewInsets="NO" id="NBv-Rf-JHw" customClass="TabBarViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Contact List" id="SEh-KL-TIF"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>

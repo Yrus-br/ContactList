@@ -23,11 +23,11 @@ extension Person {
         
         var persons: [Person] = []
         
-        let namesOfHumans = DataManager.shared.names.shuffled()
-        let lastNamesOfHumans = DataManager.shared.lastNames.shuffled()
-        let phoneNumbers = DataManager.shared.phoneNumbers.shuffled()
-        let emailAdresses = DataManager.shared.emails.shuffled()
-        let photos = DataManager.shared.photos.shuffled()
+        let namesOfHumans = DataStore.shared.names.shuffled()
+        let lastNamesOfHumans = DataStore.shared.lastNames.shuffled()
+        let phoneNumbers = DataStore.shared.phoneNumbers.shuffled()
+        let emailAdresses = DataStore.shared.emails.shuffled()
+        let photos = DataStore.shared.photos.shuffled()
         
         let iterationCount = min(
             namesOfHumans.count,
