@@ -21,7 +21,7 @@ class PersonDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "\(person.name) \(person.lastName)"
+        navigationItem.title = person.fullname
         personImge.image = UIImage(named: person.photo)
         personEmail.text = "📧 Email: \(person.emailAdress)"
         personNumber.text = "📞 Phone: \(person.phoneNumber)"

@@ -18,7 +18,7 @@ class SecondPersonListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        2
+        persons[section].rows.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -40,6 +40,25 @@ class SecondPersonListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let person = persons[section]
-        return person.name + " " + person.lastName
+        return person.fullname
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel(frame: CGRect(
+            x: 16,
+            y: 4,
+            width: tableView.frame.width,
+            height: 20
+        )
+        )
+        label.text = persons[section].fullname
+        label.font = .boldSystemFont(ofSize: 17)
+        let contentView = UIView()
+        contentView.addSubview(label)
+        
+        return contentView
+    }
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.backgroundColor = .systemYellow
     }
 }
