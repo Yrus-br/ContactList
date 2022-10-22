@@ -12,11 +12,14 @@ struct Person {
     let emailAdress: String
     let photo: String
     
+    var rows: [String] {
+        [phoneNumber, emailAdress]
+    }
+    
     var fullname: String {
         "\(name) \(lastName)"
     }
 }
-
 
 extension Person {
     static func getPersonData() -> [Person] {
