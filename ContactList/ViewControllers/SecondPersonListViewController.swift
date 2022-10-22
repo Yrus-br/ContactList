@@ -9,7 +9,7 @@ import UIKit
 
 class SecondPersonListViewController: UITableViewController {
     
-    private let persons = Person.getPersonData()
+    var persons: [Person] = []
     
     // MARK: - Table view data source
     

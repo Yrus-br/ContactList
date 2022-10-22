@@ -9,7 +9,7 @@ import UIKit
 
 class PersonListViewController: UITableViewController {
     
-    private let personList = Person.getPersonData()
+    var personList: [Person] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,7 @@ class PersonListViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return personList.count
+        personList.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -41,8 +41,9 @@ class PersonListViewController: UITableViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let detailsVC = segue.destination as? PersonDetailsViewController
-        guard let indexPath = tableView.indexPathForSelectedRow else { return }
-        detailsVC?.person = personList[indexPath.row]
+        if let indexPath = tableView.indexPathForSelectedRow {
+            guard let detailVC = segue.destination as? PersonDetailsViewController else { return }
+            detailVC.person = personList[indexPath.row]
+        }
     }
 }
